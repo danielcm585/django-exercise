@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h5>Nama: </h5>
+<p>{{name}}</p>
+
+<table>
+  <tr>
+    <th>Nama Barang</th>
+    <th>Harga Barang</th>
+    <th>Deskripsi</th>
+  </tr>
+  {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+  {% for item in item_list %}
+    <tr>
+      <th>{{item.name}}</th>
+      <th>{{item.price}}</th>
+      <th>{{item.description}}</th>
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock content %}
